@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        body {
+            background: url("https://www.pousadadossonhos.com.br/wp-content/uploads/2019/12/308508-ponte-hercilio-luz-conheca-este-importante-ponto-de-florianopolis-1.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1  {
+            margin: 0;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"]{
+            background-color: rgba(128, 128, 128, 0.199);
+            border: 0;
+            margin: 2px;
+            outline: 0;
+            border-bottom: solid 1px black;
+            width: 60px;
+        }
+
+        input[type="submit"]{
+            transition: .5s ease;
+            font: bolder 10pt arial;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 0;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover{
+            color: black;
+            background-color: rgba(128, 128, 128, 0.226);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tabuada</h1>
+    <input type="number" id="numero" ></br>
+    <input type="number" id="numero1"></br>
+    <input type="submit" value="Gerar Soma" class="botao">
+    <div class="res">resu</div>
+    <script>
+        let btn1 = document.querySelector("#numero")
+        let btn2 = document.querySelector("#numero1")
+        let soma = document.querySelector(".botao")
+        let resultado = document.querySelector(".res")
+        
+        soma.addEventListener("click", clicar)
+
+        function clicar() {
+            resultado.innerHTML = Number(btn1.value) + Number(btn2.value)
+        }
+    </script>
+</body>
+</html>

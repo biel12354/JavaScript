@@ -1,0 +1,73 @@
+body {
+    font: normal 10pt arial;
+    background-color: rgb(255, 94, 0);
+}
+
+h1 {
+    text-align: center;
+    font-size: 25pt;
+    color: white;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.63);
+
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: groove 1px black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.493);
+}
+
+#numero {
+    transition: .7s;
+    padding: 10px;
+    text-align: center;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    
+}
+
+#numero:focus{
+    scale: 110%;
+    background-color: black;
+    color: white;
+}
+
+div {
+    text-align: center;
+}
+
+div#res {
+    background-color: rgba(211, 211, 211, 0.37);
+    padding: 5px;
+    width: 200px;
+    border: solid 1px black;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+}
+
+input[type="button"]{
+    transition: .4s ease-in-out;
+    background-color: lightgray;
+    padding: 10px;
+    border: solid 1px black;
+    width: 110px;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+    scale: 95%;
+    background-color: rgba(0, 0, 0, 0.726);
+    color: white;
+}

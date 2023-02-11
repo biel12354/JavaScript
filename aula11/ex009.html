@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você estrangeiro?</title>
+</head>
+<body>
+    <h1>Descobrindo se você é estrangeiro ou não</h1>
+    <input type="text" name="text" id="text" placeholder="Digite seu país">
+    <input type="submit" value="Descobrir" id="botao">
+    <div class="res">
+
+    </div>
+    <script>
+        let text = document.getElementById("text")
+        let botao = document.getElementById("botao")
+        let resultado = document.querySelector(".res")
+        botao.addEventListener("click", clicar)
+        function clicar(){
+            if (text.value == "Brasil") {
+                resultado.innerHTML = "Você é Brasileiro"
+            } else {
+                resultado.innerHTML = "Você é estrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>

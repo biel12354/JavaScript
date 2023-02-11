@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Tabuada</h1></header>
+    <section id="box">
+        <div>
+            <p><strong>Digite um número entre 1 e 9999:</strong></p>
+            <input type="number" name="numero" id="numero">
+            <p><input type="button" value="Multiplicar" onclick="multiplicar()">
+            <input type="button" value="Limpar" onclick="limpar()"></p>
+        </div>
+    </section>
+    <footer>&copy; GabrielFernandes</footer>
+    <script>
+        let div = document.createElement("div")
+        div.setAttribute("id", "res")
+        
+        function multiplicar(){
+            let num = document.querySelector("#numero")
+            let caixa = document.createElement("textarea")
+            let box = document.querySelector("#box")
+            let valor = Number(num.value)
+            let select = document.getElementById("teste")
+            box.appendChild(div)
+            div.innerHTML = ""
+            if (valor == ""){
+                div.style.display = "none"
+                num.value = ""
+                alert("[ERRO] - Você não digitou valor nenhum, por favor digite algo!")
+            } else if (Number(num.value.length > 4)){
+                div.style.display = "none"
+                num.value = ""
+                alert("[ERRO] - Por favor digite um número entre 1 e 9999")
+            } else {
+                div.style.display = "block"
+                for(let c = 1; c <= 10; c++){
+                    div.innerHTML += `<p>${valor} X ${c} = ${valor * c}</p>`
+                }
+            }
+        }
+
+        function limpar(){
+            let num = document.querySelector("#numero")
+            num.value = ""
+            div.innerHTML = ""
+            div.style.display = "none"
+            
+        }
+    </script>
+</body>
+</html>

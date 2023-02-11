@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+<body>
+    <h1>Sistema de multas</h1>
+    <input type="number" name="velocidade" id="velocidade" placeholder="Digite sua velocidade"> Km/h
+    <input type="submit" value="Calcular" id="botao">
+    <div id="res">
+
+    </div>
+    <script>
+        let velocidade = document.getElementById("velocidade")
+        let botao = document.getElementById("botao")
+        let resultado = document.getElementById("res")
+        botao.addEventListener("click", clicar)
+        function clicar(){
+            resultado.innerHTML = `<p>Sua velocidade atual é de ${Number(velocidade.value)}Km/h</p>`
+            if (Number(velocidade.value) > 60) {
+                resultado.innerHTML += "<p>Você foi <strong>MULTADO!</strong></p>"
+            } else {
+                resultado.innerHTML += "<p>Tudo normal, dirija sempre com o cinto de segurança!</p>"
+            }
+        }
+    </script>
+</body>
+</html>
