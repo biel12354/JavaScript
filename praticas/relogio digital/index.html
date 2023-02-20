@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário de Brasília</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        div.container {
+            border: 1px solid black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            text-align: center;
+            height: 140px;
+        }
+
+        .container span {
+            display: inline-block;
+            line-height: 40px;
+            background-color: rgba(0, 0, 0, 0.308);
+            color: white;
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Horario atual</h1>
+        <span id="h">00</span>
+        <span id="m">00</span>
+        <span id="s">00</span>
+    </div>
+    <script>
+        function maiszero(num){
+            if (num < 10){
+                return "0" + num
+            } else {
+                return num
+            }
+        }
+
+        setInterval(function(){
+            let data = new Date()
+            let hora = data.getHours()
+            let minuto = data.getMinutes()
+            let segundos = data.getSeconds()
+            h.innerHTML = maiszero(hora)
+            m.innerHTML = maiszero(minuto)
+            s.innerHTML = maiszero(segundos)
+        }, 1000)
+        
+    </script>
+</body>
+</html>

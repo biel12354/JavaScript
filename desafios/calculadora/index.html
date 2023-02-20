@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        #cont {
+            border: none;
+            
+        }
+        #cont::-webkit-slider-thumb{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span id="cont" style="color: blue;">0</span>
+    </div>
+    <div class="botoes">
+        <input type="button" value="Diminuir" onclick="diminuir()">
+        <input type="button" value="Resetar" onclick="resetar()">
+        <input type="button" value="Aumentar" onclick="aumentar()">
+    </div>
+    <script>
+        let contador = document.getElementById("cont")
+
+        function aumentar(){
+            contador.innerHTML = parseInt(contador.innerHTML) + 1
+            if (parseInt(contador.innerHTML) >= 0){
+                contador.style.color = "green"
+            }
+        }
+
+        function diminuir(){
+            contador.innerHTML = parseInt(contador.innerHTML) - 1
+            if (parseInt(contador.innerHTML) < 0){
+                contador.style.color = "red"
+            }
+        }
+
+        function resetar(){
+            contador.innerHTML = 0
+            contador.style.color = "blue"
+        }
+        
+    </script>
+</body>
+</html>
