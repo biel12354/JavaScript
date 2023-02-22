@@ -11,7 +11,8 @@
 <body>
     <header>
         <img src="imagens/logo.png" alt="#">
-        <div id="botao" onclick="clicar()"><span class="material-symbols-outlined">menu</span></div>
+        <div class="pesquisa"><input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisa Desativada"><label for="pesquisar"><i class="material-symbols-outlined">search</i></label></div>
+        <div id="botao" onclick="clicar()"><span class="material-symbols-outlined" style="font-size: 2em;">menu</span></div>
     </header>
     <div class="menu">
         <ul>
@@ -26,12 +27,101 @@
     </div>
     <main>
         <article id="categorias">
-
+            <section id="categoria">
+                <section class="bicicletas">
+                    <h1>Tipos de Bicicleta</h1>
+                    <ul>
+                        <li><a href="#">Aros 26 | 29</a></li>
+                        <li><a href="#">Bicicletas Infantis</a></li>
+                    </ul>
+                </section>
+                <section class="cores">
+                    <h1>Estilos de Cores</h1>
+                    <ul>
+                        <li><a href="#">Cores Escuras</a></li>
+                        <li><a href="#">Cores Claras</a></li>
+                    </ul>
+                </section>
+            </section>
         </article>
         <article id="produtos">
-
+            <section id="produto">
+                <img src="https://www.comercialmonark.com.br/image/cache/catalog/2022/RIVER%20BIKE/POLY/4e42ecf6-cff9-4698-bcea-43be897cf551-removebg-preview-800x800.png" alt="foto de bicicleta">
+                <div class="info">
+                    <section>
+                        <h1>Bicicleta com cesta e garupa - aro 26</h1>
+                        <h2>Lojas FRBikes</h2>
+                        <p style="color: gray; font-size: 12px;">de <del>R$ 570,00</del> por</p>
+                        <h1><sub style="font-size: 13px;">R$ </sub>220,<sup style="font-size: 13px;">00</sup></h1>
+                        <p>No boleto ou pix <br>
+                        ou em até <span>12x</span> de <span>R$20,45</span> sem juros no cartão</p>
+                    </section>
+                    <a href="#">Dar uma olhada <i>&#x1F440</i></a>
+                </div>
+            </section>
+            <section id="produto">
+                <img src="https://images-americanas.b2w.io/produtos/5280919141/imagens/bicicleta-cross-bmx-aro-20-drb-bikes-highway-branca/5280919141_1_large.jpg" alt="foto de bicicleta">
+                <div class="info">
+                    <section>
+                        <h1>BMX profissional</h1>
+                        <h2>Lojas FRBikes</h2>
+                        <p style="color: gray; font-size: 12px;">de <del>R$ 870,00</del> por</p>
+                        <h1><sub style="font-size: 13px;">R$ </sub>670,<sup style="font-size: 13px;">00</sup></h1>
+                        <p>No boleto ou pix <br>
+                        ou em até <span>12x</span> de <span>R$60,45</span> sem juros no cartão</p>
+                    </section>
+                    <a href="#">Dar uma olhada <i>&#x1F440</i></a>
+                </div>
+            </section>
+            <section id="produto">
+                <img src="https://decathlonpro.vteximg.com.br/arquivos/ids/2750470-1000-1000/--caloi-strada-racing-l-g1.jpg?v=637527092646030000g" alt="foto de bicicleta">
+                <div class="info">
+                    <section>
+                        <h1>Bicicleta Strada Racing Caloi - aro 700</h1>
+                        <h2>Lojas FRBikes</h2>
+                        <p style="color: gray; font-size: 12px;">de <del>R$ 570,00</del> por</p>
+                        <h1><sub style="font-size: 13px;">R$ </sub>220,<sup style="font-size: 13px;">00</sup></h1>
+                        <p>No boleto ou pix <br>
+                        ou em até <span>12x</span> de <span>R$20,45</span> sem juros no cartão</p>
+                    </section>
+                    <a href="#">Dar uma olhada <i>&#x1F440</i></a>
+                </div>
+            </section>
         </article>
     </main>
+    <footer>
+        <aside>
+            <section id="institucional">
+                <h1>Institucional</h1>
+                <ul>
+                    <li>Quem somos</li>
+                    <li>Minha Conta</li>
+                    <li>Cadastre-se</li>
+                    <li>Meus Pedidos</li>
+                    <li>Política de Privacidade</li>
+                    <li>Notícias</li>
+                    <li>Lojas Físicas</li>
+                </ul>
+            </section>
+            <section id="suporte">
+                <h1>Suporte</h1>
+                <ul>
+                    <li>Como Comprar</li>
+                    <li>Formas de Pagamento</li>
+                    <li>Segurança</li>
+                    <li>Frete</li>
+                    <li>Trocas e Devoluções</li>
+                    <li>FAQ FRBikes</li>
+                </ul>
+            </section>
+        </aside>
+        <aside>
+            <p style="text-align: justify; color: gray; background-color: lightgray;">Todos os direitos reservados. Proibida reprodução total ou parcial. Preços e estoque sujeito a alterações sem aviso prévio. CNPJ: 18.180.777/0001-40
+                FRBikes - Rodovia Waldomiro Corrêa de Camargo KM 57,3 , Vila Martins CEP - 13308-200 Salto / SP
+                Horário de Funcionamento: De segunda a quinta das 8h às 18h - Sexta Feira das 8h às 17h.</p>
+        </aside>
+        <p>Desenvolvido por &copy; Gabriel Fernandes</p>
+    </footer>
     <script src="script/script.js"></script>
 </body>
 </html>
