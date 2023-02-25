@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@media (min-width: 768px){
+    div#botao {
+        display: none;
+    }
+
+    article#produtos {
+        max-width: 590px;
+        margin: auto;
+    }
+
+    section#produto {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        vertical-align: middle;
+        height: 500px;
+    }
+
+    div.menu {
+        display: none;
+    }
+
+    div#menu {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    div#menu ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 15px;
+        border-radius: 5px;
+        transition: .2s ease-in-out;
+    }
+
+    div#menu ul li:hover {
+        cursor: pointer;
+        background-color: rgba(105, 105, 105, 0.301);
+        color: rgba(255, 255, 255, 0.774);
+    }
+
+    footer section {
+        display: inline-block;
+        width: 50%;
+    }
+
+    footer section#institucional {
+        float: left;
+    }
+
+    footer section#suporte {
+        float: right;
+        height: 287px;
+    }
+
+    aside#sobre {
+        float: left;
+    }
+
+    footer p {
+        float: left;
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px){
+    main > article#categorias {
+        width: 30%;
+
+        float: left;
+        background-color: transparent;
+    }
+
+    main > article#categorias section#categoria {
+        height: 100%;
+        background-color: white;
+    }
+
+    main > article#categorias section#categoria h1 {
+        color: #5271ff;
+    }
+
+    main article#categorias section{
+        display: block;
+        float: none;
+        border: 0;
+    }
+
+    main > article#produtos {
+        width: 70%;
+        float: left;
+    }
+
+    footer {
+        margin-top: 20px;
+    }
+}

@@ -7,25 +7,36 @@
     <title>Site de bicicletas</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaquerys.css">
 </head>
 <body>
-    <header>
-        <img src="imagens/logo.png" alt="#">
-        <div class="pesquisa"><input type="text" name="pesquisar" id="pesquisar" placeholder="Pesquisa Desativada"><label for="pesquisar"><i class="material-symbols-outlined">search</i></label></div>
+    <header> <!-- Parte que contém o menu do site -->
+        <img src="imagens/logo.png" alt="#"></div>
         <div id="botao" onclick="clicar()"><span class="material-symbols-outlined" style="font-size: 2em;">menu</span></div>
+        <div id="menu">
+            <ul>
+                <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 30px;">category</i> Categorias</li>
+                <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 30px;">home</i> Home</li>
+                <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 30px;">person</i>Usuário</li>
+            </ul>
+        </div>
     </header>
     <div class="menu">
         <ul>
-            <li>Categorias</li>
-            <li>Home</li>
-            <li>Usuário</li>
+            <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 15px;">category</i>Categorias</li>
+            <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 15px;">home</i>Home</li>
+            <li><i class="material-symbols-outlined" style="vertical-align: sub; font-size: 15px;">person</i>Usuário</li>
         </ul>
     </div>
-    <div id="img">
+    <!-- =============================================================================== -->
+
+    <div id="img"> <!-- Parte do site onde passa varias a imagens e a logo do site centralizada no meio  -->
         <div class="trilha"></div>
         <img src="imagens/logo.png" alt="logo da loja" id="logo">
     </div>
-    <main>
+    <!-- =============================================================================== -->
+
+    <main> <!-- Dentro deste <Main> contém a seção de categorias e caixas das bicicletas -->
         <article id="categorias">
             <section id="categoria">
                 <section class="bicicletas">
@@ -87,9 +98,25 @@
                     <a href="#">Dar uma olhada <i>&#x1F440</i></a>
                 </div>
             </section>
+            <section id="produto">
+                <img src="https://images-americanas.b2w.io/produtos/5280919141/imagens/bicicleta-cross-bmx-aro-20-drb-bikes-highway-branca/5280919141_1_large.jpg" alt="foto de bicicleta">
+                <div class="info">
+                    <section>
+                        <h1>BMX profissional</h1>
+                        <h2>Lojas FRBikes</h2>
+                        <p style="color: gray; font-size: 12px;">de <del>R$ 870,00</del> por</p>
+                        <h1><sub style="font-size: 13px;">R$ </sub>670,<sup style="font-size: 13px;">00</sup></h1>
+                        <p>No boleto ou pix <br>
+                        ou em até <span>12x</span> de <span>R$60,45</span> sem juros no cartão</p>
+                    </section>
+                    <a href="#">Dar uma olhada <i>&#x1F440</i></a>
+                </div>
+            </section>
         </article>
     </main>
-    <footer>
+    <!-- =============================================================================== -->
+
+    <footer> <!-- Rodapé do site, com informações sobre suporte, contato e ETC -->
         <aside>
             <section id="institucional">
                 <h1>Institucional</h1>
@@ -115,13 +142,15 @@
                 </ul>
             </section>
         </aside>
-        <aside>
+        <aside id="sobre">
             <p style="text-align: justify; color: gray; background-color: lightgray;">Todos os direitos reservados. Proibida reprodução total ou parcial. Preços e estoque sujeito a alterações sem aviso prévio. CNPJ: 18.180.777/0001-40
                 FRBikes - Rodovia Waldomiro Corrêa de Camargo KM 57,3 , Vila Martins CEP - 13308-200 Salto / SP
                 Horário de Funcionamento: De segunda a quinta das 8h às 18h - Sexta Feira das 8h às 17h.</p>
         </aside>
         <p>Desenvolvido por &copy; Gabriel Fernandes</p>
     </footer>
-    <script src="script/script.js"></script>
+    <!-- =============================================================================== -->
+
+    <script src="script/script.js"></script> <!-- Âncora para arquivo de script's do site-->
 </body>
 </html>

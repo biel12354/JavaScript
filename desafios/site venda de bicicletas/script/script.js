@@ -26,6 +26,16 @@ setInterval(function() {
     contador++
 }, 2000)
 
+setInterval(function(){
+    if (window.innerWidth >= 768){
+        imagem.style.top = "0px"
+        main.style.top = "0px"
+    } else if (categorias.style.top != "0px"){
+        imagem.style.top = "-58px"
+        main.style.top = "-58px"
+    }
+}, 0)
+
 function clicar(){
     if (botao.style.color == "white"){
         botao.style.color = "#5271ff"
