@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Temperatura</title>
+</head>
+<body>
+    <h1 style="font-size: 1.5em;">Conversor de Fahrenheit para Graus Celsius</h1>
+    <input type="number" name="num" id="num" placeholder="F°" required>
+    <input type="button" value="Converter Temperatura" onclick="converter()">
+    <div id="res"></div>
+    <script>
+        /* Area de variáveis*/
+        let num = document.getElementById("num")
+        let res = document.getElementById("res")
+
+        /* Area de Funções */
+        function celsius(f){
+            return (f - 32) * (5/9)
+        }
+
+        function converter(){
+            res.innerHTML = celsius(num.value)
+        }
+    </script>
+</body>
+</html>

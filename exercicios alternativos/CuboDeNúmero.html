@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cubo de um número</title>
+</head>
+<body>
+    <h1>Para descobrir o seu cubo, digite um número entre 1 e 50</h1>
+    <input type="number" name="num" id="num" min="1" max="50" required>
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        let num = document.getElementById("num")
+        let res = document.getElementById("res")
+
+        function cubo(n){
+            return n**2
+        }
+
+        function calcular(){
+            res.innerHTML = `<p>${cubo(num.value)}</p>`
+        }
+    </script>
+</body>
+</html>
