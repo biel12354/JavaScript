@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla JS - Lampada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            user-select: none;
+            border: 1px solid black;
+            text-align: center;
+            background-color: white;
+        }
+
+        main > img { 
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        
+        main > input {
+            display: block;
+            padding: 10px 20px 10px 20px;
+            width: 100%;
+            margin-bottom: 10px;
+            border: none;
+            transition: .2s ease, border-radius 1s;
+            border-radius: 10px;
+        }
+
+        main > input[value="Ligar"]:hover{
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            border-radius: 0px;
+        }
+
+        main > input[value="Desligar"]:hover{
+            background-color: red;
+            color: white;
+            cursor: pointer;
+            border-radius: 0px;
+        }
+
+        main > input[value="Resetar"]:hover{
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+            border-radius: 0px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Projeto Lampada</h1>
+        <img src="imagens/desligada.jpg" alt="lampada" class="imagem">
+        <input type="button" value="Ligar" onclick="ligar()">
+        <input type="button" value="Desligar" onclick="desligar()">
+        <input type="button" value="Resetar" onclick="reset()">
+    </main>
+    <script>
+        let imagem = document.querySelector(".imagem") 
+        imagem.addEventListener('dblclick', quebrar)
+        document.body.style.transition = "1s"
+
+        function estaquebrada(){
+            return imagem.src.indexOf("quebrada") > -1
+        }
+
+        function ligar(){
+            if (!estaquebrada()){
+                imagem.src = "imagens/ligada.jpg"
+                document.body.style.backgroundColor = "orange"
+            } else {
+                window.alert("[ERRO] - A lampada esta quebrada! é impossível liga-lá!")
+            }
+        }
+
+        function desligar(){
+            if (!estaquebrada()){
+                imagem.src = "imagens/desligada.jpg"
+                document.body.style.backgroundColor = "black"
+            } else {
+                window.alert("[ERRO] - A lampada esta quebrada! é impossível desliga-lá!")
+            }
+        }
+
+        function quebrar(){
+            if (!estaquebrada()){
+                imagem.src = "imagens/quebrada.jpg"
+                document.body.style.backgroundColor = "lightgray"
+            }
+        }
+
+        function reset(){
+            imagem.src = "imagens/desligada.jpg"
+            document.body.style.backgroundColor = "white"
+        }
+    </script>
+</body>
+</html>
