@@ -1,7 +1,2 @@
-let teste = "abcskefjef"
-
-function myFunction(a, n){
-    
-}
-
-console.log(myFunction(teste, 1))
+let teste = [2, 55, 11243124]
+console.log(teste.sort())
