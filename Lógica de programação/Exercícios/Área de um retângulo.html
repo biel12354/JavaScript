@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área de um Retângulo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        main {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            background-color: white;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        main h1 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        main p {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        
+        main input {
+            display: block;
+            margin: auto;
+        }
+
+        main input[type="number"]{
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-100%);
+            border: 1px solid black;
+            outline: 0;
+            height: 30px;
+            padding: 15px 0px 15px 15px;
+            transition: .6s ease-in-out;
+        }
+
+        main input[type="number"]:focus{
+            background-color: black;
+            color: white;
+        }
+
+        main input[type="button"]{
+            margin-top: 10px;
+            width: 100%;
+            height: 50px;
+            border: 0;
+            background-color: black;
+            color: white;
+            transition: .2s ease-in-out, border-radius 1s ease-in-out;
+        }
+
+        main input[type="button"]:hover{
+            background-color: lightgray;
+            color: black;
+            cursor: pointer;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <h1>Área de um retângulo</h1>
+        <p>Programa feito para calcular a área de uma altura e largura</p>
+        <p>Digite a Altura e Largura</p>
+        <input type="number" name="alt" id="alt" required min="1" max="9999" placeholder="Altura">
+        <input type="number" name="lar" id="lar" required min="1" max="9999" placeholder="Largura">
+        <input type="button" value="Calcular" onclick="calcular()">
+        <div id="res"></div>
+    </main>
+    <script>
+        let res = document.getElementById("res")
+        let lar = document.getElementById("lar")
+        let alt = document.getElementById("alt")
+        res.style.paddingTop = "10px"
+        
+        /* Funções */
+
+        function verificar(){
+            if(lar.value < 1 || alt.value < 1){
+                return true
+            } else {
+                return false
+            }
+        }
+
+        function calcular(){
+            document.body.style.transition = "1s"
+            if (verificar() == true){
+                window.alert("[ERRO] - Digite um valor entre 1 e 9999!")
+                res.innerHTML = ""
+                alt.value = ""
+                lar.value = ""
+                document.body.style.backgroundColor = "white"
+            } else {
+                
+                document.body.style.backgroundColor = "black"
+                res.innerText = `A área de um retângulo que possui a altura de ${alt.value} metros e uma largura de ${lar.value} metros tem a área de ${Number(alt.value) * Number(lar.value)} metros`
+                alt.value = ""
+                lar.value = ""
+            }
+        }
+    </script>
+</body>
+</html>
